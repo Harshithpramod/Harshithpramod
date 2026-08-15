@@ -1,0 +1,151 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="860"
+    height="190"
+    viewBox="0 0 860 190">
+
+    <!-- Background -->
+
+    <rect
+        width="860"
+        height="190"
+        rx="12"
+        fill="#0d1117"
+        stroke="#30363d"
+        stroke-width="2"/>
+
+
+    <!-- Header -->
+
+    <text
+        x="25"
+        y="22"
+        fill="#c9d1d9"
+        font-family="monospace"
+        font-size="13">
+
+        harshithpramod • contributions
+    </text>
+
+
+    <!-- Contribution cells -->
+
+    
+        <rect
+            x="25"
+            y="35"
+            width="11"
+            height="11"
+            rx="2"
+            fill="#161b22"
+            opacity="0">
+
+            <animate
+                attributeName="opacity"
+                from="0"
+                to="1"
+                dur="0.25s"
+                begin="0.000s"
+                fill="freeze"/>
+
+        </rect>
+        
+        <rect
+            x="25"
+            y="50"
+            width="11"
+            height="11"
+            rx="2"
+            fill="#006d32"
+            opacity="0">
+
+            <animate
+                attributeName="opacity"
+                from="0"
+                to="1"
+                dur="0.25s"
+                begin="0.015s"
+                fill="freeze"/>
+
+        </rect>
+        
+
+
+    <!-- Legend -->
+
+    <text
+        x="25"
+        y="158"
+        fill="#8b949e"
+        font-family="monospace"
+        font-size="12">
+
+        Less
+    </text>
+
+
+    <rect
+        x="60"
+        y="148"
+        width="11"
+        height="11"
+        rx="2"
+        fill="#161b22"/>
+
+    <rect
+        x="77"
+        y="148"
+        width="11"
+        height="11"
+        rx="2"
+        fill="#0e4429"/>
+
+    <rect
+        x="94"
+        y="148"
+        width="11"
+        height="11"
+        rx="2"
+        fill="#006d32"/>
+
+    <rect
+        x="111"
+        y="148"
+        width="11"
+        height="11"
+        rx="2"
+        fill="#26a641"/>
+
+    <rect
+        x="128"
+        y="148"
+        width="11"
+        height="11"
+        rx="2"
+        fill="#39d353"/>
+
+
+    <text
+        x="150"
+        y="158"
+        fill="#8b949e"
+        font-family="monospace"
+        font-size="12">
+
+        More
+    </text>
+
+
+    <!-- Footer -->
+
+    <text
+        x="25"
+        y="180"
+        fill="#39d353"
+        font-family="monospace"
+        font-size="13">
+
+        123 contributions in the last year
+    </text>
+
+</svg>

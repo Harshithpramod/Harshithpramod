@@ -1,0 +1,325 @@
+<svg width="490" height="500" viewBox="0 0 490 500"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Main terminal window -->
+  <rect
+    width="490"
+    height="500"
+    rx="12"
+    fill="#0d1117"
+    stroke="#30363d"
+    stroke-width="2"
+  />
+
+  <!-- Terminal buttons -->
+  <circle cx="22" cy="22" r="6" fill="#ff5f56"/>
+  <circle cx="42" cy="22" r="6" fill="#ffbd2e"/>
+  <circle cx="62" cy="22" r="6" fill="#27c93f"/>
+
+  <!-- Header -->
+  <text
+    x="25"
+    y="65"
+    fill="#58a6ff"
+    font-family="monospace"
+    font-size="20"
+    font-weight="bold"
+  >
+    harshithpramod@github
+  </text>
+
+  <text
+    x="25"
+    y="88"
+    fill="#8b949e"
+    font-family="monospace"
+    font-size="13"
+  >
+    ─────────────────────────────────────
+  </text>
+
+
+  <!-- ROLE -->
+  <g opacity="0">
+
+    <text
+      x="25"
+      y="125"
+      fill="#39d353"
+      font-family="monospace"
+      font-size="16"
+    >
+      &gt; ROLE
+    </text>
+
+    <text
+      x="150"
+      y="125"
+      fill="#c9d1d9"
+      font-family="monospace"
+      font-size="16"
+    >
+      CSE Student
+    </text>
+
+    <animate
+      attributeName="opacity"
+      from="0"
+      to="1"
+      dur="0.5s"
+      begin="0.8s"
+      fill="freeze"
+    />
+
+  </g>
+
+
+  <!-- FOCUS -->
+  <g opacity="0">
+
+    <text
+      x="25"
+      y="165"
+      fill="#39d353"
+      font-family="monospace"
+      font-size="16"
+    >
+      &gt; FOCUS
+    </text>
+
+    <text
+      x="150"
+      y="165"
+      fill="#c9d1d9"
+      font-family="monospace"
+      font-size="16"
+    >
+      AI + Full Stack
+    </text>
+
+    <animate
+      attributeName="opacity"
+      from="0"
+      to="1"
+      dur="0.5s"
+      begin="1.2s"
+      fill="freeze"
+    />
+
+  </g>
+
+
+  <!-- STACK -->
+  <g opacity="0">
+
+    <text
+      x="25"
+      y="205"
+      fill="#39d353"
+      font-family="monospace"
+      font-size="16"
+    >
+      &gt; STACK
+    </text>
+
+    <text
+      x="150"
+      y="205"
+      fill="#c9d1d9"
+      font-family="monospace"
+      font-size="16"
+    >
+       C++ / Java /React / TS,JS / Python
+    </text>
+
+    <animate
+      attributeName="opacity"
+      from="0"
+      to="1"
+      dur="0.5s"
+      begin="1.6s"
+      fill="freeze"
+    />
+
+  </g>
+
+
+  <!-- BACKEND -->
+  <g opacity="0">
+
+    <text
+      x="25"
+      y="245"
+      fill="#39d353"
+      font-family="monospace"
+      font-size="16"
+    >
+      &gt; BACKEND
+    </text>
+
+    <text
+      x="150"
+      y="245"
+      fill="#c9d1d9"
+      font-family="monospace"
+      font-size="16"
+    >
+      FastAPI / Supabase
+    </text>
+
+    <animate
+      attributeName="opacity"
+      from="0"
+      to="1"
+      dur="0.5s"
+      begin="2.0s"
+      fill="freeze"
+    />
+
+  </g>
+
+
+  <!-- TOOLS -->
+  <g opacity="0">
+
+    <text
+      x="25"
+      y="285"
+      fill="#39d353"
+      font-family="monospace"
+      font-size="16"
+    >
+      &gt; TOOLS
+    </text>
+
+    <text
+      x="150"
+      y="285"
+      fill="#c9d1d9"
+      font-family="monospace"
+      font-size="16"
+    >
+      Docker / Git / Github
+    </text>
+
+    <animate
+      attributeName="opacity"
+      from="0"
+      to="1"
+      dur="0.5s"
+      begin="2.4s"
+      fill="freeze"
+    />
+
+  </g>
+
+
+  <!-- CURRENT -->
+  <g opacity="0">
+
+    <text
+      x="25"
+      y="325"
+      fill="#39d353"
+      font-family="monospace"
+      font-size="16"
+    >
+      &gt; CURRENT
+    </text>
+
+    <text
+      x="150"
+      y="325"
+      fill="#c9d1d9"
+      font-family="monospace"
+      font-size="16"
+    >
+      Building &amp; Learning
+    </text>
+
+    <animate
+      attributeName="opacity"
+      from="0"
+      to="1"
+      dur="0.5s"
+      begin="2.8s"
+      fill="freeze"
+    />
+
+  </g>
+
+
+
+
+    <animate
+      attributeName="opacity"
+      from="0"
+      to="1"
+      dur="0.5s"
+      begin="3.2s"
+      fill="freeze"
+    />
+
+
+
+
+  <!-- STATUS -->
+  <g opacity="0">
+
+    <text
+      x="25"
+      y="405"
+      fill="#39d353"
+      font-family="monospace"
+      font-size="16"
+    >
+      &gt; STATUS
+    </text>
+
+    <text
+      x="150"
+      y="405"
+      fill="#39d353"
+      font-family="monospace"
+      font-size="16"
+    >
+      ONLINE ●
+    </text>
+
+    <animate
+      attributeName="opacity"
+      from="0"
+      to="1"
+      dur="0.5s"
+      begin="3.6s"
+      fill="freeze"
+    />
+
+  </g>
+
+
+  <!-- Footer -->
+  <g opacity="0">
+
+    <text
+      x="25"
+      y="455"
+      fill="#8b949e"
+      font-family="monospace"
+      font-size="14"
+    >
+      $ echo "keep building"
+    </text>
+
+    <animate
+      attributeName="opacity"
+      from="0"
+      to="1"
+      dur="0.5s"
+      begin="4.0s"
+      fill="freeze"
+    />
+
+  </g>
+
+</svg>
