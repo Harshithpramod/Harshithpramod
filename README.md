@@ -4,11 +4,11 @@
 <code>harshith@github ~ $ ./contributions.sh</code>
 </h3>
 
-<img
-  src="./contrib-heatmap.svg"
-  width="860"
-  alt="GitHub contribution heatmap"
-/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Harshithpramod/Harshithpramod/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Harshithpramod/Harshithpramod/output/github-snake.svg" />
+  <img alt="Snake animation" src="https://raw.githubusercontent.com/Harshithpramod/Harshithpramod/output/github-snake-dark.svg" width="860" />
+</picture>
 
 <br>
 <br>
@@ -23,7 +23,7 @@
 <td valign="top">
 <img
   src="./avi-ascii.svg"
-  width="370"
+  width="430"
   alt="ASCII portrait"
 />
 </td>
@@ -31,7 +31,7 @@
 <td valign="top">
 <img
   src="./info-card.svg"
-  width="490"
+  width="430"
   alt="Developer information"
 />
 </td>
@@ -53,7 +53,7 @@ GitHub
 
 &nbsp; • &nbsp;
 
-<a href="https://www.linkedin.com/">
+<a href="https://www.linkedin.com/in/harshith-pramod-m/">
 LinkedIn
 </a>
 
