@@ -1,5 +1,10 @@
 <div align="center">
 
+<img src="https://media1.tenor.com/m/rf71abuteZcAAAAd/batman-caped-crusader-caped-crusader.gif" width="500" alt="Batman" />
+
+<br>
+<br>
+
 <h3>
 <code>harshith@github ~ $ whoami</code>
 </h3>
