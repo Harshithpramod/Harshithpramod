@@ -1,8 +1,14 @@
 <div align="center">
 
-<img src="https://media1.tenor.com/m/rf71abuteZcAAAAd/batman-caped-crusader-caped-crusader.gif" width="500" alt="Batman" />
+<img src="./banner.gif" width="860" alt="Banner" />
 
 <br>
+
+<p>
+<img src="https://github-readme-stats.vercel.app/api?username=harshithpramod&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&ring_color=39d353&icon_color=39d353&title_color=58a6ff&text_color=c9d1d9" width="430" alt="GitHub Stats" />
+<img src="https://github-readme-streak-stats.herokuapp.com?user=harshithpramod&theme=github-dark-blue&hide_border=true&background=0D1117&ring=39D353&fire=39D353&currStreakLabel=58A6FF&sideLabels=58A6FF&currStreakNum=C9D1D9&sideNums=C9D1D9&dates=8B949E" width="430" alt="GitHub Streak" />
+</p>
+
 <br>
 
 <h3>
