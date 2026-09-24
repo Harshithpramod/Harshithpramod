@@ -1,7 +1,4 @@
-requests==2.32.3
-beautifulsoup4==4.12.3
-pillow
-numpy
-opencv-python
-rembg
-onnxruntime
+fonttools>=4.50
+numpy>=1.26
+opencv-python-headless>=4.9
+pillow>=10.3
