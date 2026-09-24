@@ -15,7 +15,7 @@ class Theme:
     accent: str    # the bat-signal: prompts, metrics, highlights
     steel: str     # cold rain-blue, the second voice in diagrams
     live: str      # "online" dot
-    bloom: str     # the vampire squid's cloak
+    bloom: str     # the Hollow mask's stripes
 
 
 DARK = Theme(
