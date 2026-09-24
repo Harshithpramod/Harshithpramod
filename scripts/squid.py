@@ -120,7 +120,7 @@ def _cloak(canvas: _Canvas, rng: random.Random) -> None:
             # The web sags back toward the body between each pair of arms.
             hem.append((mx + (CX - mx) * 0.2, my + (CLOAK_TOP - my) * 0.2))
     body = [(CX + MANTLE_HALF, CLOAK_TOP - 22)] + hem + [(CX - MANTLE_HALF, CLOAK_TOP - 22)]
-    canvas.polygon(body, 118, True)
+    canvas.polygon(body, 92, True)
 
     for i, (tx, ty) in enumerate(tips):
         base = (CX + (i - (ARMS - 1) / 2) * 20, CLOAK_TOP - 6)
@@ -154,7 +154,7 @@ def _marine_snow(canvas: _Canvas, rng: random.Random) -> None:
         in_body = abs(x - CX) < 270 and CLOAK_TOP - 250 < y < CLOAK_TOP + 330 and abs(x - CX) < 90 + (y - 40) * 0.8
         if in_body:
             continue
-        canvas.dot(x, y, rng.uniform(1.4, 2.6), rng.randint(90, 170), False)
+        canvas.dot(x, y, rng.uniform(3.0, 4.2), rng.randint(70, 150), False)
         placed += 1
 
 

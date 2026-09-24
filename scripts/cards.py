@@ -49,10 +49,14 @@ def _chrome(theme: Theme, width: int, height: int, title: str, right: str) -> st
 
 
 def _fade_in(delay: float) -> str:
+    """Held hidden until `delay`, then eased in. Starts at 0s and keeps the element's resting
+    state visible, so a renderer that skips SMIL still shows everything."""
+    dur = delay + 0.5
+    hold = f"0;{delay / dur:.3f};1"
     return (
-        f'<animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="{delay:.2f}s" fill="freeze"/>'
-        f'<animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.5s" '
-        f'begin="{delay:.2f}s" fill="freeze"/>'
+        f'<animate attributeName="opacity" values="0;0;1" keyTimes="{hold}" dur="{dur:.2f}s" fill="freeze"/>'
+        f'<animateTransform attributeName="transform" type="translate" values="-6 0;-6 0;0 0" keyTimes="{hold}" '
+        f'dur="{dur:.2f}s" fill="freeze"/>'
     )
 
 
@@ -66,7 +70,7 @@ def _rows(theme: Theme, top: float) -> tuple[list[str], float, float]:
         y += 14
         for key, value in group:
             row = _text(PAD, y, escape(key), theme.muted, ROW_SIZE) + _text(PAD + 150, y, escape(value), theme.ink, ROW_SIZE)
-            body.append(f'<g opacity="0">{row}{_fade_in(delay)}</g>')
+            body.append(f'<g>{row}{_fade_in(delay)}</g>')
             y += 37
             delay += 0.07
         if group_index < len(WHOAMI) - 1:
@@ -91,14 +95,14 @@ def whoami(theme: Theme, fonts: Fonts, footer_left: str, footer_right: str) -> s
         '<animate attributeName="opacity" values="1;0.35;1" dur="2.4s" repeatCount="indefinite"/></circle>'
         + _text(PAD + 22, y, escape(STATUS), theme.live, ROW_SIZE)
     )
-    body.append(f'<g opacity="0">{status}{_fade_in(delay)}</g>')
+    body.append(f'<g>{status}{_fade_in(delay)}</g>')
     prompt_y = y + 44
     dollar = _text(PAD, prompt_y, "$", theme.accent, ROW_SIZE)
     cursor = (
         f'<rect x="{PAD + 22}" y="{prompt_y - 17:.0f}" width="11" height="22" fill="{theme.ink}">'
         '<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" repeatCount="indefinite"/></rect>'
     )
-    body.append(f'<g opacity="0">{dollar}{cursor}{_fade_in(delay + 0.1)}</g>')
+    body.append(f'<g>{dollar}{cursor}{_fade_in(delay + 0.1)}</g>')
 
     body.append(f'<line x1="22" y1="{height - 44}" x2="{CARD_W - 22}" y2="{height - 44}" stroke="{theme.border}"/>')
     body.append(_text(22, height - 18, escape(footer_left), theme.muted, 12))
@@ -109,11 +113,13 @@ def whoami(theme: Theme, fonts: Fonts, footer_left: str, footer_right: str) -> s
 # ---- case files ------------------------------------------------------------------------
 
 def _draw_in(path: str, stroke: str, delay: float, width: float = 1.6) -> str:
-    """A stroke that draws itself once, then stays."""
+    """A stroke that draws itself once, then stays. Drawn at rest, for the same reason as _fade_in."""
+    dur = delay + 1.4
     return (
         f'<path d="{path}" fill="none" stroke="{stroke}" stroke-width="{width}" stroke-linecap="round" '
-        f'stroke-dasharray="400" stroke-dashoffset="400">'
-        f'<animate attributeName="stroke-dashoffset" from="400" to="0" dur="1.4s" begin="{delay:.2f}s" fill="freeze"/></path>'
+        f'stroke-dasharray="400" stroke-dashoffset="0">'
+        f'<animate attributeName="stroke-dashoffset" values="400;400;0" keyTimes="0;{delay / dur:.3f};1" '
+        f'dur="{dur:.2f}s" fill="freeze"/></path>'
     )
 
 
@@ -230,7 +236,7 @@ def principles(theme: Theme, fonts: Fonts) -> str:
             _path(numeral, x, 104, theme.accent) + _path(heading, x + 58, 102, theme.ink)
             + _text(x, 164, escape(evidence), theme.muted, 23, SANS)
         )
-        body.append(f'<g opacity="0">{group}{_fade_in(0.3 + i * 0.25)}</g>')
+        body.append(f'<g>{group}{_fade_in(0.3 + i * 0.25)}</g>')
     return _svg(WIDE, height, "How I build: " + "; ".join(t for t, _ in PRINCIPLES), "".join(body))
 
 

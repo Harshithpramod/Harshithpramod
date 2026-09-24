@@ -128,22 +128,22 @@ def render(theme: Theme, art: Art) -> str:
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}" role="img" aria-label="{escape(art.label)}">
 <defs>
-  <linearGradient id="wash" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#fff"/><stop offset="0.46" stop-color="#fff"/>
-    <stop offset="0.54" stop-color="#000"/><stop offset="1" stop-color="#000"/>
+  <!-- A curtain in the card's own colour, soft at its top edge, that slides down off the art.
+       Its resting place is below the card, so the art stays visible wherever SMIL doesn't run. -->
+  <linearGradient id="curtain" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="{theme.surface}" stop-opacity="0"/><stop offset="0.12" stop-color="{theme.surface}"/>
+    <stop offset="1" stop-color="{theme.surface}"/>
   </linearGradient>
-  <mask id="reveal" maskUnits="userSpaceOnUse" x="0" y="0" width="{WIDTH}" height="{HEIGHT}">
-    <rect x="0" y="{top - art_h:.1f}" width="{WIDTH}" height="{art_h * 2:.1f}" fill="url(#wash)">
-      <animate attributeName="y" from="{top - art_h:.1f}" to="{top + 40:.1f}" dur="{REVEAL_SECONDS}s" begin="0.3s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
-    </rect>
-  </mask>
 </defs>
 <rect x="0.5" y="0.5" width="{WIDTH - 1}" height="{HEIGHT - 1}" rx="14" fill="{theme.surface}" stroke="{theme.border}"/>
 <line x1="1" y1="{TITLE_H}" x2="{WIDTH - 1}" y2="{TITLE_H}" stroke="{theme.border}"/>
 <rect x="22" y="17" width="10" height="10" rx="2" fill="{theme.accent}"/>
 <text x="42" y="27" font-family="{MONO}" font-size="12.5" fill="{theme.muted}">harshith@batcave <tspan fill="{theme.faint}">·</tspan> {escape(art.title)}</text>
 <text x="{WIDTH - 22}" y="27" font-family="{MONO}" font-size="12.5" fill="{theme.muted}" text-anchor="end">{COLS}×{ROWS}</text>
-<g font-family="{MONO}" font-size="{FONT_SIZE}" mask="url(#reveal)">{rows_svg}</g>
+<g font-family="{MONO}" font-size="{FONT_SIZE}">{rows_svg}</g>
+<rect x="1" y="{HEIGHT}" width="{WIDTH - 2}" height="{art_h + 80:.1f}" fill="url(#curtain)">
+  <animate attributeName="y" values="{top - 80:.1f};{HEIGHT}" dur="{REVEAL_SECONDS}s" begin="0s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+</rect>
 <line x1="22" y1="{HEIGHT - 44}" x2="{WIDTH - 22}" y2="{HEIGHT - 44}" stroke="{theme.border}"/>
 <text x="22" y="{HEIGHT - 18}" font-family="{MONO}" font-size="12" fill="{theme.muted}">{escape(art.caption)}</text>
 <text x="{WIDTH - 22}" y="{HEIGHT - 18}" font-family="{MONO}" font-size="12" fill="{theme.muted}" text-anchor="end">{glyph_count:,} glyphs</text>
