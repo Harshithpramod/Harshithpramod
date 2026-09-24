@@ -31,7 +31,6 @@ WHOAMI: tuple[tuple[tuple[str, str], ...], ...] = (
     (
         ("shipped", "3 products · 2 live demos"),
         ("proof", "2nd place, PyGenic ARC Project Expo"),
-        ("off-duty", "Bleach · The Mentalist · Man United"),
     ),
 )
 STATUS = "final-year CSE · open to full-stack roles"
