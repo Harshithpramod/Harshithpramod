@@ -1,6 +1,6 @@
 """ASCII art card: tonal, edge-aware glyphs over a cleared background, revealed by a slow ink wash.
 
-The source is painted in code (gargoyle.py). A tint mask picks
+The source is painted in code (senbonzakura.py). A tint mask picks
 which cells are drawn in the bloom colour instead of ink.
 """
 
