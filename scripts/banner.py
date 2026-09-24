@@ -35,14 +35,18 @@ class Fonts:
     mono: FontRef
 
 
-def bat_path(scale: float = 1.0, cx: float = 0.0, cy: float = 0.0) -> str:
+def bat_points(scale: float = 1.0, cx: float = 0.0, cy: float = 0.0) -> list[tuple[float, float]]:
     """The emblem, angular, built from its right half and mirrored. 200 wide at scale 1."""
     half = (
         (0, -16), (6, -16), (10, -34), (14, -14), (24, -12), (46, -20), (72, -32), (100, -44),
         (88, -6), (76, -14), (66, 8), (54, -2), (42, 18), (30, 8), (16, 26), (0, 46),
     )
     points = list(half) + [(-x, y) for x, y in reversed(half[1:-1])]
-    return "M" + " L".join(f"{cx + x * scale:.1f} {cy + y * scale:.1f}" for x, y in points) + " Z"
+    return [(cx + x * scale, cy + y * scale) for x, y in points]
+
+
+def bat_path(scale: float = 1.0, cx: float = 0.0, cy: float = 0.0) -> str:
+    return "M" + " L".join(f"{x:.1f} {y:.1f}" for x, y in bat_points(scale, cx, cy)) + " Z"
 
 
 def _clouds(rng: random.Random) -> str:
