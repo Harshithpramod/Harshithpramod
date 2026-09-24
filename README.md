@@ -7,7 +7,7 @@
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/header-whoami-dark.svg"><img src="./assets/header-whoami-light.svg" width="100%" alt="$ whoami"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gargoyle-dark.svg"><img src="./assets/gargoyle-light.svg" width="49%" alt="ASCII art: a Gotham gargoyle under the bat-signal"></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/whoami-dark.svg"><img src="./assets/whoami-light.svg" width="49%" alt="Role, stack, and what I have shipped"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/senbonzakura-dark.svg"><img src="./assets/senbonzakura-light.svg" width="49%" alt="ASCII art: Senbonzakura, a katana scattering into cherry-blossom petals"></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/whoami-dark.svg"><img src="./assets/whoami-light.svg" width="49%" alt="Role, stack, and what I have shipped"></picture>
 
 <br><br>
 

@@ -16,7 +16,7 @@ from pathlib import Path
 import ascii_card
 import banner
 import cards
-import gargoyle
+import senbonzakura
 from content import LINKS, PROJECTS, SOURCES
 from fontpaths import FontRef
 from theme import THEMES
@@ -125,7 +125,7 @@ def readme() -> str:
 
 {themed("header-whoami", "$ whoami")}
 
-{themed("gargoyle", "ASCII art: a Gotham gargoyle under the bat-signal", "49%")} {themed("whoami", "Role, stack, and what I have shipped", "49%")}
+{themed("senbonzakura", "ASCII art: Senbonzakura, a katana scattering into cherry-blossom petals", "49%")} {themed("whoami", "Role, stack, and what I have shipped", "49%")}
 
 <br><br>
 
@@ -166,12 +166,12 @@ def main() -> None:
     footer_right = f"{total:,} contributions in the last year" if total is not None else "harshithpramod.vercel.app"
 
     write("banner.svg", banner.render(fonts))
-    stone, tint = gargoyle.render()
-    art = ascii_card.Art(stone, tint, "~/gotham/gargoyle", "gargoyle · gotham cathedral, 23:47",
-                         "ASCII art: a Gotham gargoyle under the bat-signal")
+    sword, tint = senbonzakura.render()
+    art = ascii_card.Art(sword, tint, "~/senbonzakura", "chire, senbonzakura · scatter, thousand cherry blossoms",
+                         "ASCII art: Senbonzakura, a katana scattering into cherry-blossom petals")
     for theme in THEMES:
         suffix = f"-{theme.name}.svg"
-        write("gargoyle" + suffix, ascii_card.render(theme, art))
+        write("senbonzakura" + suffix, ascii_card.render(theme, art))
         write("whoami" + suffix, cards.whoami(theme, fonts, f"updated {today}", footer_right))
         for index, project in enumerate(PROJECTS, start=1):
             write(f"project-{project.slug}{suffix}", cards.project(theme, fonts, index, project))

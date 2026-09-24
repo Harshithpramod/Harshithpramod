@@ -15,7 +15,7 @@ class Theme:
     accent: str    # the bat-signal: prompts, metrics, highlights
     steel: str     # cold rain-blue, the second voice in diagrams
     live: str      # "online" dot
-    bloom: str     # the signal behind the gargoyle
+    bloom: str     # Senbonzakura's petals
 
 
 DARK = Theme(
@@ -29,7 +29,7 @@ DARK = Theme(
     accent="#f5c518",
     steel="#7f9cc2",
     live="#6fd3a1",
-    bloom="#f5c518",
+    bloom="#f4a6bd",
 )
 
 LIGHT = Theme(
@@ -43,7 +43,7 @@ LIGHT = Theme(
     accent="#a67a00",
     steel="#3f5f8a",
     live="#1f8f5f",
-    bloom="#a67a00",
+    bloom="#c43a6b",
 )
 
 THEMES = (DARK, LIGHT)
