@@ -16,7 +16,7 @@ from pathlib import Path
 import ascii_card
 import banner
 import cards
-import hollow
+import gargoyle
 from content import LINKS, PROJECTS, SOURCES
 from fontpaths import FontRef
 from theme import THEMES
@@ -125,7 +125,7 @@ def readme() -> str:
 
 {themed("header-whoami", "$ whoami")}
 
-{themed("hollow", "ASCII art: a Hollow mask from Bleach", "49%")} {themed("whoami", "Role, stack, and what I have shipped", "49%")}
+{themed("gargoyle", "ASCII art: a Gotham gargoyle under the bat-signal", "49%")} {themed("whoami", "Role, stack, and what I have shipped", "49%")}
 
 <br><br>
 
@@ -166,11 +166,12 @@ def main() -> None:
     footer_right = f"{total:,} contributions in the last year" if total is not None else "harshithpramod.vercel.app"
 
     write("banner.svg", banner.render(fonts))
-    mask, tint = hollow.render()
-    art = ascii_card.Art(mask, tint, "~/hollowfication", "hollow mask · bleach", "ASCII art: a Hollow mask from Bleach")
+    stone, tint = gargoyle.render()
+    art = ascii_card.Art(stone, tint, "~/gotham/gargoyle", "gargoyle · gotham cathedral, 23:47",
+                         "ASCII art: a Gotham gargoyle under the bat-signal")
     for theme in THEMES:
         suffix = f"-{theme.name}.svg"
-        write("hollow" + suffix, ascii_card.render(theme, art))
+        write("gargoyle" + suffix, ascii_card.render(theme, art))
         write("whoami" + suffix, cards.whoami(theme, fonts, f"updated {today}", footer_right))
         for index, project in enumerate(PROJECTS, start=1):
             write(f"project-{project.slug}{suffix}", cards.project(theme, fonts, index, project))

@@ -15,7 +15,7 @@ class Theme:
     accent: str    # the bat-signal: prompts, metrics, highlights
     steel: str     # cold rain-blue, the second voice in diagrams
     live: str      # "online" dot
-    bloom: str     # the Hollow mask's stripes
+    bloom: str     # the signal behind the gargoyle
 
 
 DARK = Theme(
@@ -29,7 +29,7 @@ DARK = Theme(
     accent="#f5c518",
     steel="#7f9cc2",
     live="#6fd3a1",
-    bloom="#e5484d",
+    bloom="#f5c518",
 )
 
 LIGHT = Theme(
@@ -43,7 +43,7 @@ LIGHT = Theme(
     accent="#a67a00",
     steel="#3f5f8a",
     live="#1f8f5f",
-    bloom="#b4232f",
+    bloom="#a67a00",
 )
 
 THEMES = (DARK, LIGHT)
