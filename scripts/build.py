@@ -35,7 +35,6 @@ FONT_FILES = {
 SECTIONS = {
     "whoami": "whoami",
     "work": "ls ~/case-files",
-    "principles": "cat protocols.md",
     "activity": "./patrol-log.sh",
     "contact": "./bat-signal.sh",
 }
@@ -137,12 +136,6 @@ def readme() -> str:
 
 <br><br>
 
-{themed("header-principles", "$ cat protocols.md")}
-
-{themed("principles", "How I build: evidence over suspicion; lock it at the source; AI earns its place")}
-
-<br><br>
-
 {themed("header-activity", "$ ./patrol-log.sh")}
 
 {snake}
@@ -175,7 +168,6 @@ def main() -> None:
         write("whoami" + suffix, cards.whoami(theme, fonts, f"updated {today}", footer_right))
         for index, project in enumerate(PROJECTS, start=1):
             write(f"project-{project.slug}{suffix}", cards.project(theme, fonts, index, project))
-        write("principles" + suffix, cards.principles(theme, fonts))
         for key, command in SECTIONS.items():
             write(f"header-{key}{suffix}", cards.header(theme, command))
         for key, label in BUTTONS:

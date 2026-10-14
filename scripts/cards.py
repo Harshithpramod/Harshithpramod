@@ -1,9 +1,9 @@
-"""The terminal cards: whoami, the case files, protocols, section headers and links."""
+"""The terminal cards: whoami, the case files, section headers and links."""
 
 from html import escape
 
 from banner import Fonts, bat_path
-from content import PRINCIPLES, STATUS, WHOAMI, Project
+from content import STATUS, WHOAMI, Project
 from fontpaths import Shaped, text_path
 from theme import MONO, SANS, Theme
 
@@ -217,27 +217,9 @@ def project(theme: Theme, fonts: Fonts, index: int, p: Project) -> str:
     return _svg(CARD_W, height, f"{p.name}: {p.kind}", "".join(body))
 
 
-# ---- protocols, headers, links --------------------------------------------------------
+# ---- headers, links --------------------------------------------------------
 
 WIDE = 1740
-
-
-def principles(theme: Theme, fonts: Fonts) -> str:
-    height = 230
-    column = (WIDE - 2 * PAD) / 3
-    body = [f'<rect x="0.5" y="0.5" width="{WIDE - 1}" height="{height - 1}" rx="14" fill="{theme.surface}" stroke="{theme.border}"/>']
-    for i, (title, evidence) in enumerate(PRINCIPLES):
-        x = PAD + i * column + (28 if i else 0)
-        if i:
-            body.append(f'<line x1="{x - 28:.0f}" y1="40" x2="{x - 28:.0f}" y2="{height - 40}" stroke="{theme.border}"/>')
-        numeral = text_path(fonts.display_bold, ("I", "II", "III")[i], 48)
-        heading = text_path(fonts.display_bold, title.upper(), 42, tracking=0.02)
-        group = (
-            _path(numeral, x, 104, theme.accent) + _path(heading, x + 58, 102, theme.ink)
-            + _text(x, 164, escape(evidence), theme.muted, 23, SANS)
-        )
-        body.append(f'<g>{group}{_fade_in(0.3 + i * 0.25)}</g>')
-    return _svg(WIDE, height, "How I build: " + "; ".join(t for t, _ in PRINCIPLES), "".join(body))
 
 
 def header(theme: Theme, command: str) -> str:
