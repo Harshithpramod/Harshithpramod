@@ -105,10 +105,3 @@ SOURCES = (
     ("Smart Pantry", f"{GITHUB}/smart_pantry"),
     ("AdForge case study", f"{PORTFOLIO}/work/adforge"),
 )
-
-# Three rules the work above follows, each with the evidence for it.
-PRINCIPLES = (
-    ("Evidence over suspicion", "PentestAI proves a hit in a sandbox first."),
-    ("Lock it at the source", "Row-level security, not if-statements."),
-    ("AI earns its place", "One failed model call never sinks the batch."),
-)

@@ -21,12 +21,6 @@
 
 <br><br>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/header-principles-dark.svg"><img src="./assets/header-principles-light.svg" width="100%" alt="$ cat protocols.md"></picture>
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/principles-dark.svg"><img src="./assets/principles-light.svg" width="100%" alt="How I build: evidence over suspicion; lock it at the source; AI earns its place"></picture>
-
-<br><br>
-
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/header-activity-dark.svg"><img src="./assets/header-activity-light.svg" width="100%" alt="$ ./patrol-log.sh"></picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Harshithpramod/Harshithpramod/output/snake-dark.svg"><img src="https://raw.githubusercontent.com/Harshithpramod/Harshithpramod/output/snake.svg" width="100%" alt="Contribution graph"></picture>
