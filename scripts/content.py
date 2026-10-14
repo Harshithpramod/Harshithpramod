@@ -9,7 +9,6 @@ LINKS = {
     "portfolio": PORTFOLIO,
     "linkedin": "https://www.linkedin.com/in/harshith-pramod-m/",
     "email": "mailto:harshithpramodm@gmail.com",
-    "resume": f"{PORTFOLIO}/Harshith_Pramod_Resume.pdf",
 }
 
 # (key, value) rows of the whoami card, in groups separated by a rule.

@@ -38,7 +38,7 @@ SECTIONS = {
     "activity": "./patrol-log.sh",
     "contact": "./bat-signal.sh",
 }
-BUTTONS = (("portfolio", "Portfolio"), ("linkedin", "LinkedIn"), ("email", "Email"), ("resume", "Résumé"))
+BUTTONS = (("portfolio", "Portfolio"), ("linkedin", "LinkedIn"), ("email", "Email"))
 
 
 def ensure_fonts() -> None:
