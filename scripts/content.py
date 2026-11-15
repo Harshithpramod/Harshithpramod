@@ -3,7 +3,7 @@
 from dataclasses import dataclass
 
 GITHUB = "https://github.com/Harshithpramod"
-PORTFOLIO = "https://harshithpramod.vercel.app"
+PORTFOLIO = "https://harshithpramod.me"
 
 LINKS = {
     "portfolio": PORTFOLIO,
@@ -22,7 +22,7 @@ WHOAMI: tuple[tuple[tuple[str, str], ...], ...] = (
         ("langs", "TypeScript · Python · C++ · Java · SQL"),
         ("frontend", "React · Next.js · Tailwind · Vite"),
         ("backend", "Node.js · FastAPI · Flask · REST"),
-        ("data", "Supabase · PostgreSQL · RLS · Edge fns"),
+        ("data", "Supabase · PostgreSQL · RLS · Redis"),
         ("ai", "Gemini · tool calling · CodeQL · Semgrep"),
         ("ship", "Docker · AWS · Vercel · CF Workers"),
         ("certs", "AWS Academy ×2 · IBM Generative AI"),
@@ -60,9 +60,9 @@ PROJECTS = (
             "traces the taint, and every high or critical finding is",
             "re-run in a locked-down sandbox before it counts.",
         ),
-        metric="5",
-        metric_label=("stages from clone to report: secrets,", "LLM, taint, sandbox, CVSS-tagged PDF"),
-        stack=("React 19", "Supabase", "Gemini", "CodeQL", "Docker"),
+        metric="<70s",
+        metric_label=("from repo URL to a scored report,", "every finding mapped to CVSS, CWE, OWASP"),
+        stack=("Supabase", "Redis", "Gemini", "CodeQL", "Docker"),
         link="https://pen-ai-omega.vercel.app",
         live=True,
     ),
